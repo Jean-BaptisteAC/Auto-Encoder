@@ -1,0 +1,64 @@
+Model: "encoder"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_6 (InputLayer)           [(None, 28, 28, 1)]  0           []                               
+                                                                                                  
+ conv2d_6 (Conv2D)              (None, 15, 15, 32)   6304        ['input_6[0][0]']                
+                                                                                                  
+ conv2d_7 (Conv2D)              (None, 10, 10, 64)   73792       ['conv2d_6[0][0]']               
+                                                                                                  
+ flatten_2 (Flatten)            (None, 6400)         0           ['conv2d_7[0][0]']               
+                                                                                                  
+ dense_8 (Dense)                (None, 168)          1075368     ['flatten_2[0][0]']              
+                                                                                                  
+ dense_9 (Dense)                (None, 16)           2704        ['dense_8[0][0]']                
+                                                                                                  
+ z_mean (Dense)                 (None, 2)            34          ['dense_9[0][0]']                
+                                                                                                  
+ z_log_var (Dense)              (None, 2)            34          ['dense_9[0][0]']                
+                                                                                                  
+ sampling_3 (Sampling)          (None, 2)            0           ['z_mean[0][0]',                 
+                                                                  'z_log_var[0][0]']              
+                                                                                                  
+==================================================================================================
+Total params: 1,158,236
+Trainable params: 1,158,236
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None
+Model: "decoder"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_7 (InputLayer)        [(None, 2)]               0         
+                                                                 
+ dense_10 (Dense)            (None, 6272)              18816     
+                                                                 
+ reshape_2 (Reshape)         (None, 7, 7, 128)         0         
+                                                                 
+ conv2d_transpose_6 (Conv2DT  (None, 14, 14, 128)      147584    
+ ranspose)                                                       
+                                                                 
+ conv2d_transpose_7 (Conv2DT  (None, 28, 28, 32)       36896     
+ ranspose)                                                       
+                                                                 
+ conv2d_transpose_8 (Conv2DT  (None, 28, 28, 1)        289       
+ ranspose)                                                       
+                                                                 
+=================================================================
+Total params: 203,585
+Trainable params: 203,585
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/5
+547/547 [==============================] - 114s 207ms/step - loss: 361.5752 - reconstruction loss: 356.9554 - kl loss: 4.6198
+Epoch 2/5
+547/547 [==============================] - 128s 235ms/step - loss: 270.3183 - reconstruction loss: 264.3320 - kl loss: 5.9863
+Epoch 3/5
+547/547 [==============================] - 118s 215ms/step - loss: 265.3125 - reconstruction loss: 259.2022 - kl loss: 6.1103
+Epoch 4/5
+547/547 [==============================] - 119s 218ms/step - loss: 263.6747 - reconstruction loss: 257.5134 - kl loss: 6.1613
+Epoch 5/5
+547/547 [==============================] - 114s 209ms/step - loss: 262.5630 - reconstruction loss: 256.3296 - kl loss: 6.2334
