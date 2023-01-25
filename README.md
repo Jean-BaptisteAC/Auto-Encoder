@@ -8,6 +8,7 @@ Autoencoders can be used for anomaly classification, dimensionnality reduction, 
 Code here
 ```
 
+![Turn](readme/img/turn_tm20.gif)
 
 
 
