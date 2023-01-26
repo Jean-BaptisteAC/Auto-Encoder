@@ -7,6 +7,7 @@ Autoencoders can be used for anomaly classification, dimensionnality reduction, 
 ## Using the code
 
 You can use the jupyter version of the project with the file ```VAE.ipynb```, or the python file ```VAE.py```.
+Other useful documents can be found in the **Ressource** Folder.
 
 ## Architecture of the Model: 
 
@@ -171,6 +172,6 @@ Some other interesting results using other classes of the FASHION-MNIST dataset 
 ## Conclusion 
 
 
-This project is interesting because of the ability to transition smoothly from an image type to another. 
+This very simplified version of an Auto Encoder is interesting because of the ability to smoothly transition from an image type to another. 
 Moreover, as most of the transitions are without discontinuities, we can interpolate images with any parameter and still have realistic results.
 
