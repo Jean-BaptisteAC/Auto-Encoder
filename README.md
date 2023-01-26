@@ -124,7 +124,7 @@ The picture shows that the average is close to what we would expect. The interpo
 
 Which is interesting in this example is that we come from a bag image to a sneaker picture, while traversing the Z-subspace of Ankle Boots. (Corresponding to x = 0.4-0.6). 
 
-## Other Results:
+## Other Transitions:
 
 Some other interesting results using other classes of the FASHION-MNIST dataset are displayed on the following figures: 
 
@@ -145,4 +145,9 @@ Some other interesting results using other classes of the FASHION-MNIST dataset 
 ![image](Ressources/PullToDress.png)
 
 
+## Conclusion 
+
+
+This project is interesting because of the ability to transition smoothly from an image type to another. 
+Moreover, as most of the transitions are without discontinuities, we can interpolate images with any parameter and still have realistic results.
 
