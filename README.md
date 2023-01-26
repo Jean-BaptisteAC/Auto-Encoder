@@ -114,19 +114,35 @@ What we can see here, is that the transitions between different classes of Fashi
 
 
 
+For the next part of the report, we are going to focus on the fusion of image types using interpolation as our main tool. We first computed the average Z-Vectors of all samples from 2 selected classes, here bags and shoes. Which gives us following result, after computing the decoder on the vectors:
 
+![Turn](Ressources/average.png)
 
+The picture shows that the average is close to what we would expect. The interpolation with several parameters is shown on the next figure:
 
+![Turn](Ressources/Hybrid.png)
 
+Which is interesting in this example is that we come from a bag image to a sneaker picture, while traversing the Z-subspace of Ankle Boots. (Corresponding to x = 0.4-0.6). 
 
+## Other Results:
 
+Some other interesting results using other classes of the FASHION-MNIST dataset are displayed on the following figures: 
 
+**Bag–Sandal Transition:**
 
+![image](Ressources/BagToSandal.png)
 
+**Sandal–Sneaker Transition:**
 
-```
-Code here
-```
+![image](Ressources/SandalToShoes.png)
+
+**Pullover–T-Shirt Transition:**
+
+![image](Ressources/PullToTshirt.png)
+
+**Pullover–Dress Transition:**
+
+![image](Ressources/PullToDress.png)
 
 
 
