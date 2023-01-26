@@ -7,6 +7,7 @@ Autoencoders can be used for anomaly classification, dimensionnality reduction, 
 ## Using the code
 
 You can use the jupyter version of the project with the file ```VAE.ipynb```, or the python file ```VAE.py```.
+
 Other useful documents can be found in the **Ressource** Folder.
 
 ## Architecture of the Model: 
@@ -15,7 +16,7 @@ The following figure describes the model that we constructed for our Variable Au
 
 ![Turn](Ressources/File.drawio.png)
 
-**The written sizes are corresponding to the output format of data after each layer. The sizes underneath Convolution and Transpose Convolution Layers are the kernel sizes**
+*The written sizes are corresponding to the output format of data after each layer. The sizes underneath Convolution and Transpose Convolution Layers are the kernel sizes*
 
 The encoder is mapped on the left side while the decoder is on the right side of the image. In between, the intermediate Z-vector is of size 2. We decided for this project that a dimension of 2 will be enough to capture all the subtilties of the dataset: we indeed selected the Fashion-MNIST data set for its simple features.
 
