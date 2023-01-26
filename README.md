@@ -8,7 +8,7 @@ Autoencoders can be used for anomaly classification, dimensionnality reduction, 
 
 You can use the jupyter version of the project with the file ```VAE.ipynb```, or the python file ```VAE.py```.
 
-Other useful documents can be found in the **Ressource** Folder.
+Other useful documents can be found in the **Ressources** Folder.
 
 ## Architecture of the Model: 
 
