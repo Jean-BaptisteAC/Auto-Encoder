@@ -4,6 +4,9 @@ The goal of an Auto Encoder is to encode an image within a very low-dimentional 
 
 Autoencoders can be used for anomaly classification, dimensionnality reduction, preprocessing, and for merging different images. 
 
+## Using the code
+
+You can use the jupyter version of the project with the file ```VAE.ipynb```, or the python file ```VAE.py```.
 
 ## Architecture of the Model: 
 
