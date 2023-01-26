@@ -118,6 +118,26 @@ For the next part of the report, we are going to focus on the fusion of image ty
 
 ![Turn](Ressources/average.png)
 
+Now that we have the average vectors from two different classes, we can interpolate them using a very simple linear interpolation algorithm:
+
+```
+x = 0
+j = 1
+for i in range(1,7):
+
+    plt.subplot(2,3,i)
+    plt.axis('off')
+    
+    #The two low dimentional average vectors are AverageZ1 and AverageZ2
+    ZVector = x*AverageZ1 + (1-x)*AverageZ2 
+    picture = vae.decoder(ZVector)
+    newpic = np.reshape(picture[0], [28, 28])
+    plt.imshow(newpic)
+    plt.title("x = " + str(round(x,2)))
+    
+    x += 0.2
+````
+
 The picture shows that the average is close to what we would expect. The interpolation with several parameters is shown on the next figure:
 
 ![Turn](Ressources/Hybrid.png)
