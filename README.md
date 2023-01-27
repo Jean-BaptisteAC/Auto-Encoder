@@ -14,7 +14,7 @@ Other useful documents can be found in the **Resources** Folder.
 
 The following figure describes the model that we constructed for our Variable Auto Encoder (VAE). 
 
-![Turn](Ressources/File.drawio.png)
+![Turn](Resources/File.drawio.png)
 
 *The written sizes are corresponding to the output format of data after each layer. The sizes underneath Convolution and Transpose Convolution Layers are the kernel sizes*
 
@@ -113,7 +113,7 @@ For creating data points, we used the sampling method from the normal distributi
 
 The following figure represents the Z-vector subspace after the model learned the data of the train set. 
 
-![Turn](Ressources/plot.png)
+![Turn](Resources/plot.png)
 
 What we can see here, is that the transitions between different classes of Fashion objects are pretty smooth, which is the purpose of the VAE because we want to be able to interpolate images. However, we can spot several “holes” in the subspace, and some of the regions are overlapping. Overlapping regions means that we might have trouble to differentiate between separate picture classes. And holes in the Z-vector subspace directly result in pictures that we can’t recognize because the decoder is not able to construct a proper image out of it.
 
@@ -121,7 +121,7 @@ What we can see here, is that the transitions between different classes of Fashi
 
 For the next part of the report, we are going to focus on the fusion of image types using interpolation as our main tool. We first computed the average Z-Vectors of all samples from 2 selected classes, here bags and shoes. Which gives us following result, after computing the decoder on the vectors:
 
-![Turn](Ressources/average.png)
+![Turn](Resources/average.png)
 
 Now that we have the average vectors from two different classes, we can interpolate them using a very simple linear interpolation algorithm:
 
@@ -145,7 +145,7 @@ for i in range(1,7):
 
 The picture shows that the average is close to what we would expect. The interpolation with several parameters is shown on the next figure:
 
-![Turn](Ressources/Hybrid.png)
+![Turn](Resources/Hybrid.png)
 
 What is interesting in this example is that we come from a bag image to a sneaker picture, while traversing the Z-subspace of Ankle Boots. (Corresponding to x = 0.4-0.6). 
 
@@ -155,19 +155,19 @@ Some other interesting results using other classes of the FASHION-MNIST dataset 
 
 **Bag–Sandal Transition:**
 
-![image](Ressources/BagToSandal.png)
+![image](Resources/BagToSandal.png)
 
 **Sandal–Sneaker Transition:**
 
-![image](Ressources/SandalToShoes.png)
+![image](Resources/SandalToShoes.png)
 
 **Pullover–T-Shirt Transition:**
 
-![image](Ressources/PullToTshirt.png)
+![image](Resources/PullToTshirt.png)
 
 **Pullover–Dress Transition:**
 
-![image](Ressources/PullToDress.png)
+![image](Resources/PullToDress.png)
 
 
 ## Conclusion 
